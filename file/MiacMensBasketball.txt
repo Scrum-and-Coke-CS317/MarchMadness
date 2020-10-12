@@ -1,0 +1,176 @@
+2019-11-01 @Bethany Luth             85  Gust Adolphus            83           
+2019-11-08  St Olaf                  63 @WI Stout                 57           
+2019-11-08 @Macalester               72  Northland                56           
+2019-11-08  MN Morris                86 @Concordia Mhd            82           
+2019-11-08  Buena Vista              96 @Gust Adolphus            73           
+2019-11-08  NE Wesleyan              78  St John's MN             56           Superior, WI
+2019-11-09  Bethel MN               100 @Crown MN                 82           
+2019-11-09  St John's MN             71  Marian WI                43           Superior, WI
+2019-11-10 @Luther IA                80  Macalester               77           
+2019-11-12 @Carleton MN              82  N Central MN             67           
+2019-11-12 @WI Superior              75  Concordia Mhd            69           
+2019-11-12  WI LaCrosse              73 @Bethel MN                62           
+2019-11-13 @Augsburg                102  Northland                54           
+2019-11-13  Crown MN                 83 @Hamline                  80           
+2019-11-13  Northwestern MN          94 @Macalester               69           
+2019-11-13 @WI Stevens Pt            77  St Olaf                  59           
+2019-11-13  St John's MN             86 @MN Morris                80           
+2019-11-13  Concordia Mhd            92 @WI Stout                 90           
+2019-11-14  St Thomas MN             87 @Whitman                  79           
+2019-11-15 @St Mary's MN             68  Crown MN                 52           
+2019-11-15 @Macalester               75  N Central MN             66           
+2019-11-16 @St Olaf                  82  Bethany Luth             77           
+2019-11-16 @Whitworth                85  St Thomas MN             64           
+2019-11-16 @Concordia Mhd            82  St Scholastica           77           
+2019-11-16 @Northwestern MN          83  Gust Adolphus            71           
+2019-11-19 @Moorhead St              89  Concordia Mhd            52           
+2019-11-19  St Olaf                  70 @N Central MN             67           
+2019-11-19  Bethel MN                73 @Wartburg                 68           
+2019-11-20 @St John's MN             79  Carleton MN              60           
+2019-11-20 @Hamline                  87  Northwestern MN          84           
+2019-11-20  St Thomas MN            110 @St Scholastica           64           
+2019-11-21  Macalester               92 @Crown MN                 85 O1        
+2019-11-23  Augsburg                 75 @Concordia Mhd            55           
+2019-11-23 @St Mary's MN             80  St Olaf                  74           
+2019-11-23 @Gust Adolphus            79  Macalester               66           
+2019-11-23 @Bethel MN                86  Hamline                  63           
+2019-11-23  St Thomas MN             82  NE Wesleyan              63           Chicago, IL
+2019-11-24  St Thomas MN             84  DePauw                   66           Chicago, IL
+2019-11-26  Macalester               58 @Hamline                  55           
+2019-11-26 @St Thomas MN             74  Carleton MN              60           
+2019-11-26 @WI LaCrosse              79  Augsburg                 71           
+2019-11-26  St Olaf                  92 @Bethel MN                64           
+2019-11-26  St John's MN             77 @St Mary's MN             63           
+2019-11-30 @Augsburg                 79  WI River Falls           76           
+2019-11-30 @Central IA               89  Gust Adolphus            79 O1        
+2019-11-30  St Mary's MN            103 @Luther IA                97 O1        
+2019-12-04 @Augsburg                 85  St Olaf                  57           
+2019-12-04  Bethel MN                90 @Carleton MN              74           
+2019-12-04 @St John's MN             66  Concordia Mhd            41           
+2019-12-04 @Gust Adolphus            88  Hamline                  81 O1        
+2019-12-04 @St Thomas MN             64  Macalester               35           
+2019-12-07 @Augsburg                 73  Carleton MN              57           
+2019-12-07 @St Mary's MN             69  Concordia Mhd            54           
+2019-12-07 @St Thomas MN             90  Gust Adolphus            66           
+2019-12-07  St John's MN             82 @Hamline                  57           
+2019-12-07  Bethel MN                79 @Macalester               57           
+2019-12-11 @St Olaf                  76  Hamline                  55           
+2019-12-11  St Mary's MN             75 @Macalester               59           
+2019-12-11  Carleton MN              78 @Concordia Mhd            55           
+2019-12-11  St John's MN             66 @Gust Adolphus            52           
+2019-12-11  St Thomas MN             89 @Augsburg                 81           
+2019-12-11  Bethel MN                64 @WI Stevens Pt            46           
+2019-12-14 @WI River Falls           79  Hamline                  56           
+2019-12-14  WI Platteville           65 @Bethel MN                54           
+2019-12-14 @Gust Adolphus            76  Concordia Mhd            59           
+2019-12-16  Carleton MN              97 @Bethany Luth             91           
+2019-12-18  Hope                     94  Carleton MN              88 O1        Orlando, FL
+2019-12-19  Carleton MN              98  Finlandia                79           Orlando, FL
+2019-12-19 @St Mary's MN             93  Luther MN                61           
+2019-12-20  St John's MN             69 @Linfield                 62           
+2019-12-20  Augsburg                 72  Shenandoah               60           San Juan, PR
+2019-12-21  St John's MN             82 @Willamette               69           
+2019-12-21  Augsburg                 90  St Mary's MD             73           San Juan, PR
+2019-12-29  WI Whitewater            65  Hamline                  60           Naples, FL
+2019-12-29 @Claremont M.S.           77  Gust Adolphus            67           
+2019-12-30  WI Eau Claire            76 @St Olaf                  70           
+2019-12-30  Hamline                  82  Baruch                   75           Naples, FL
+2019-12-30 @Wheaton IL               77  St Mary's MN             67           
+2019-12-30 @Viterbo                  78  Carleton MN              69           
+2019-12-31 @Pomona Pitzer           110  Gust Adolphus            91           
+2019-12-31  Dubuque                  75  St Mary's MN             69           Wheaton, IL
+2020-01-04  St Thomas MN             85 @Concordia Mhd            49           
+2020-01-04 @Carleton MN              68  Macalester               54           
+2020-01-04  St Olaf                  84 @Gust Adolphus            68           
+2020-01-04 @St John's MN             82  Augsburg                 63           
+2020-01-04 @Bethel MN                84  St Mary's MN             57           
+2020-01-06  Augsburg                 86 @St Mary's MN             79           
+2020-01-06 @Gust Adolphus            93  Carleton MN              82           
+2020-01-06  Bethel MN                72 @Concordia Mhd            53           
+2020-01-06  St Thomas MN             92 @Hamline                  83 O1        
+2020-01-06  St John's MN             91 @St Olaf                  75           
+2020-01-08  Carleton MN              71 @Hamline                  54           
+2020-01-08 @Macalester               74  Concordia Mhd            70           
+2020-01-08  Gust Adolphus            76 @St Mary's MN             65           
+2020-01-08  Augsburg                 80 @Bethel MN                75           
+2020-01-08 @St Thomas MN             94  St Olaf                  73           
+2020-01-11 @Augsburg                 90  Macalester               76           
+2020-01-11  Carleton MN              82 @St Olaf                  74           
+2020-01-11 @Bethel MN                73  Gust Adolphus            69           
+2020-01-11  St Mary's MN             87 @Hamline                  73           
+2020-01-11  St John's MN             87 @St Thomas MN             70           
+2020-01-13 @Luther MN                73  Concordia Mhd            72           
+2020-01-15  Hamline                  62 @Macalester               54           
+2020-01-15  St Thomas MN             77 @Carleton MN              64           
+2020-01-15  Gust Adolphus            78 @Concordia Mhd            58           
+2020-01-15  Bethel MN                81 @St Olaf                  73           
+2020-01-15 @St John's MN             80  St Mary's MN             62           
+2020-01-18  St Olaf                  75 @Macalester               60           
+2020-01-18 @St John's MN             88  Bethel MN                60           
+2020-01-18  St Thomas MN             81 @St Mary's MN             64           
+2020-01-19 @Gust Adolphus            92  Augsburg                 88           
+2020-01-20 @Augsburg                 92  Hamline                  59           
+2020-01-20  St Mary's MN             79 @Carleton MN              77 O1        
+2020-01-20 @St Olaf                  89  Concordia Mhd            68           
+2020-01-20 @St John's MN             90  Macalester               60           
+2020-01-20 @St Thomas MN             69  Bethel MN                50           
+2020-01-22  Augsburg                 75 @St Olaf                  74           
+2020-01-22 @Bethel MN                70  Carleton MN              54           
+2020-01-22  St John's MN             73 @Concordia Mhd            38           
+2020-01-22  Gust Adolphus            83 @Hamline                  69           
+2020-01-22  St Thomas MN             80 @Macalester               59           
+2020-01-25 @Augsburg                 96  Concordia Mhd            64           
+2020-01-25 @St Olaf                  74  St Mary's MN             62           
+2020-01-25  St John's MN             78 @Carleton MN              71           
+2020-01-25 @Macalester               80  Gust Adolphus            72           
+2020-01-25  Bethel MN                69 @Hamline                  54           
+2020-01-29 @Hamline                  88  St Olaf                  84 O1        
+2020-01-29 @St Mary's MN             66  Macalester               61           
+2020-01-29 @Carleton MN              83  Concordia Mhd            60           
+2020-01-29 @St John's MN             68  Gust Adolphus            59           
+2020-01-29 @St Thomas MN            101  Augsburg                 60           
+2020-02-01  Augsburg                 93 @Carleton MN              89           
+2020-02-01  St Mary's MN             78 @Concordia Mhd            62           
+2020-02-01  St Thomas MN            106 @Gust Adolphus            67           
+2020-02-01 @St John's MN             71  Hamline                  57           
+2020-02-01 @Bethel MN                82  Macalester               63           
+2020-02-03  Hamline                  75 @Concordia Mhd            68           
+2020-02-05 @Augsburg                 95  St Mary's MN             80           
+2020-02-05 @Carleton MN              70  Gust Adolphus            69           
+2020-02-05 @Bethel MN                73  Concordia Mhd            63           
+2020-02-05 @St Thomas MN             84  Hamline                  68           
+2020-02-05 @St John's MN             68  St Olaf                  53           
+2020-02-08 @St Thomas MN             97  Concordia Mhd            58           
+2020-02-08 @Macalester               71  Carleton MN              60           
+2020-02-08 @St Olaf                  84  Gust Adolphus            67           
+2020-02-08  St John's MN             75 @Augsburg                 64           
+2020-02-08 @St Mary's MN             63  Bethel MN                59           
+2020-02-12  Augsburg                 91 @Hamline                  78           
+2020-02-12 @St Mary's MN             74  Carleton MN              55           
+2020-02-12  St Olaf                  69 @Concordia Mhd            60           
+2020-02-12  St John's MN             82 @Macalester               59           
+2020-02-12  St Thomas MN             65 @Bethel MN                60           
+2020-02-15  Augsburg                 83 @Macalester               72           
+2020-02-15 @Carleton MN              92  St Olaf                  82           
+2020-02-15  Bethel MN                65 @Gust Adolphus            58           
+2020-02-15  Hamline                  83 @St Mary's MN             78           
+2020-02-15  St Thomas MN             71 @St John's MN             66           
+2020-02-19 @Carleton MN              88  Hamline                  78           
+2020-02-19  Macalester               73 @Concordia Mhd            70           
+2020-02-19  St Mary's MN             71 @Gust Adolphus            63           
+2020-02-19  Bethel MN                83 @Augsburg                 66           
+2020-02-19  St Thomas MN             76 @St Olaf                  69           
+2020-02-22 @St Olaf                  90  Macalester               79           
+2020-02-22  Concordia Mhd            67 @Hamline                  62           
+2020-02-22 @Augsburg                 96  Gust Adolphus            77           
+2020-02-22  St John's MN             73 @Bethel MN                66           
+2020-02-22 @St Thomas MN             74  St Mary's MN             72           
+2020-02-25  St Olaf                  76 @Augsburg                 68           
+2020-02-25  St Mary's MN             72 @Bethel MN                59           
+2020-02-27 @St John's MN             71  St Olaf                  43           
+2020-02-27 @St Thomas MN             79  St Mary's MN             66           
+2020-02-29 @St John's MN             82  St Thomas MN             63           
+2020-03-06  St Thomas MN             67  St Norbert               60 P         Platteville, WI
+2020-03-06 @St John's MN             87  Ripon                    75 P         
+2020-03-07 @St John's MN             78  WI Eau Claire            69 P         
+2020-03-07  St Thomas MN             73 @WI Platteville           70 P        
