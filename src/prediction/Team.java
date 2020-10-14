@@ -11,7 +11,14 @@ import java.util.Map;
  */
 public class Team {
 	String name;
-	int sumPointDifferential = 0, rank = 0, totalNumGames = 0;
+	int sumPointDifferential, rank, totalNumGames;
+	public Team(String name) {
+		sumPointDifferential = 0;
+		rank = 0;
+		totalNumGames = 0;
+		this.name = name;
+	
+	}
 	/**
 	 * @return the rank
 	 */
