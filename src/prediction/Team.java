@@ -12,6 +12,7 @@ import java.util.Map;
 public class Team {
 	String name;
 	int sumPointDifferential = 0, rank = 0, totalNumGames = 0;
+	Map<String, Integer> season;
 	/**
 	 * @return the rank
 	 */
@@ -24,7 +25,7 @@ public class Team {
 	public void setRank(int rank) {
 		this.rank = rank;
 	}
-	Map<String, Integer> season;
+	
 	/**
 	 * @return the name
 	 */
@@ -64,13 +65,13 @@ public class Team {
 	/**
 	 * @return the season
 	 */
-	public Map getSeason() {
+	public Map<String, Integer> getSeason() {
 		return season;
 	}
 	/**
 	 * @param season the season to set
 	 */
-	public void setSeason(Map season) {
+	public void setSeason(Map<String, Integer> season) {
 		this.season = season;
 	}
 	/**
