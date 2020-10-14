@@ -18,9 +18,9 @@ import org.junit.jupiter.api.Test;
  */
 class TeamTest {
 
-	Team scrumTeam = new Team();
-	Team andTeam = new Team();
-	Team cokeTeam = new Team();
+	Team scrumTeam = new Team("scrumTeam");
+	Team andTeam = new Team("andTeam");
+	Team cokeTeam = new Team("cokeTeam");
 	
 	/**
 	 * @throws java.lang.Exception
@@ -29,7 +29,6 @@ class TeamTest {
 	void setUp() throws Exception {
 		
 		//create team (lost against cokeTeam)
-		scrumTeam.setName("scrumTeam");
 		scrumTeam.setRank(1);
 		Map<String, Integer> season1 = new HashMap<>();
 		scrumTeam.setSeason(season1);
@@ -37,7 +36,6 @@ class TeamTest {
 		scrumTeam.setTotalNumGames(1);
 		
 		//create second team (empty season)
-		andTeam.setName("andTeam");
 		andTeam.setRank(1);
 		Map<String, Integer> season2 = new HashMap<>();
 		andTeam.setSeason(season2);
@@ -45,7 +43,6 @@ class TeamTest {
 		andTeam.setTotalNumGames(0);
 		
 		//create third team (won against scrumTeam)
-		cokeTeam.setName("cokeTeam");
 		cokeTeam.setRank(1);
 		Map<String, Integer> season3 = new HashMap<>();
 		season3.put("scrumTeam", -1);
