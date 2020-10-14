@@ -19,7 +19,7 @@ public class RatingController {
 	 * Please Delete and Create Test Class
 	 * @param a
 	 */
-	public static void main(String a[]){
+	public static void main(String args[]){
 
 		ArrayList<Team> arr1= new ArrayList<Team>();
 
@@ -43,10 +43,10 @@ public class RatingController {
 		tempTeam5.setRank(5);
 		arr1.add(tempTeam5);
 
-		outputRanking(arr1);
+		
 		teamRatingSelectionSort(arr1);
 		System.out.println("Printing to file...");
-		//outputRanking(arr1);
+		System.out.println(outputRanking(arr1));
 	}
 
 	/**
@@ -83,17 +83,14 @@ public class RatingController {
 	 * This creates a csv file containing all the Teams Sorted by their Rank
 	 * @param teamsSortedByRank
 	 */
-	public static void outputRanking(ArrayList<Team> teamsSortedByRank) {
-
+	public static String outputRanking(ArrayList<Team> teamsSortedByRank) {
+		String output = "Rank,TeamName\n";
 		try(FileWriter csvWriter = new FileWriter("file/ranking.csv")){
-			csvWriter.append("Rank");
-			csvWriter.append(",");
-			csvWriter.append("TeamName");
-			csvWriter.append("\n");
+			csvWriter.append(output);
 
 			for (Team team : teamsSortedByRank) { 
-				csvWriter.write(team.getRank() + ", " + team.getName());
-				csvWriter.append("\n");
+				csvWriter.write(team.getRank() + ", " + team.getName()+"\n");
+				output += team.getRank() + ", " + team.getName()+"\n";
 			}
 
 			csvWriter.flush();
@@ -101,5 +98,7 @@ public class RatingController {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+		
+		return output;
 	}
 }
