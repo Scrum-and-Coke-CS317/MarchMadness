@@ -10,15 +10,18 @@ import java.util.Map;
  *
  */
 public class Team {
-	String name;
-	int sumPointDifferential = 0, rank = 0, totalNumGames = 0;
-	Map<String, Integer> season;
+	private String name;
+	private int sumPointDifferential = 0, rank = 0, totalNumGames = 0;
+	private Map<String, Integer> season;
 	
 	/**
-	 * default constructor for Team object
+	 * Constructor for Team object
+	 * 
+	 * @param inputName the name of this team
 	 */
-	public Team() {
+	public Team(String inputName) {
 		season = new Map<>();
+		this.name = inputName;
 	}
 	
 	/**
