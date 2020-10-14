@@ -2,17 +2,58 @@ package prediction;
 
 import java.io.FileWriter;
 import java.util.*;
-
+import Jama.*;
 /**
  * @author scrum-and-coke
  *
  */
 public class RatingController {
 	ArrayList<Team> allTeams = new ArrayList<Team>();
+	private Matrix season, pointDifferentialsMatrix;
 	
-	private int[][] teamMatrix;
-	private int[] pointDeferentials;
-
+	private double[][] teamMatrix;
+	private double[][] pointDifferentials;
+	private ArrayList<Team> teams;
+	public RatingController(ArrayList<Team> teams){
+		this.teams = teams;
+		initMatrix();
+		
+	}
+	
+	private void initMatrix() {
+		for(int y = 0; y <= teams.size(); y++) {
+			HashMap temp = teams.get(y).getSeason();
+			Object [] gamesPlayed = temp.values().toArray();
+			if(y == teams.size()) pointDifferentials[0][y] = 0;
+			else {
+			pointDifferentials[0][y] = teams.get(y).getSumPointDifferential();
+			}
+			for(int x = 0; x <= teams.size(); x++) {
+				if(y == teams.size()) {
+					teamMatrix[x][y] = 1;
+					
+				}
+				else {
+				teamMatrix[x][y] = (int) gamesPlayed[y];
+				}
+			}
+		}
+		season = new Matrix(teamMatrix);
+		pointDifferentialsMatrix = new Matrix(pointDifferentials);
+		
+	}
+	
+	public void rankTeams(ArrayList<Team> teams) {
+		double det = season.det();
+		season = season.inverse();
+		season = season.times(1/det);
+		season = season.times(pointDifferentialsMatrix);
+		double[][] ranks = season.getArrayCopy();
+		for(int i = 0; i <= ranks.length; i++) {
+			teams.get(i).setRank(ranks[0][i]);
+		}
+		
+	}
 	/**
 	 * tests sorting the arrayList and printing it to a file
 	 * 
@@ -53,16 +94,6 @@ public class RatingController {
 		outputRanking(arr1);
 	}
 
-	/**
-	 * this does nothing yet
-	 * @param teamName
-	 * @return
-	 */
-	public static int getRating(Team team) {
-
-		return 0;
-
-	}
 
 	/**
 	 * This is a selection sorting algorithm to order Teams by their rankings

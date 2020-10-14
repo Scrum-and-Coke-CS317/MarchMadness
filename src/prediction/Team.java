@@ -11,8 +11,9 @@ import java.util.Map;
  */
 public class Team {
 	private String name;
-	private int sumPointDifferential = 0, rank = 0, totalNumGames = 0;
-	private Map<String, Integer> season;
+	private int sumPointDifferential = 0, totalNumGames = 0;
+	private double rank;
+	private HashMap<String, Integer> season;
 	
 	/**
 	 * Constructor for Team object
@@ -22,18 +23,19 @@ public class Team {
 	public Team(String inputName) {
 		season = new Map<>();
 		this.name = inputName;
+		rank = 0.0;
 	}
 	
 	/**
 	 * @return the rank
 	 */
-	public int getRank() {
+	public double getRank() {
 		return rank;
 	}
 	/**
 	 * @param rank the rank to set
 	 */
-	public void setRank(int rank) {
+	public void setRank(double rank) {
 		this.rank = rank;
 	}
 	
@@ -76,13 +78,13 @@ public class Team {
 	/**
 	 * @return the season
 	 */
-	public Map<String, Integer> getSeason() {
+	public HashMap<String, Integer> getSeason() {
 		return season;
 	}
 	/**
 	 * @param season the season to set
 	 */
-	public void setSeason(Map<String, Integer> season) {
+	public void setSeason(HashMap<String, Integer> season) {
 		this.season = season;
 	}
 	/**
