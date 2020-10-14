@@ -10,15 +10,20 @@ import java.util.Map;
  *
  */
 public class Team {
-	String name;
-	int sumPointDifferential, rank, totalNumGames;
-	public Team(String name) {
-		sumPointDifferential = 0;
-		rank = 0;
-		totalNumGames = 0;
-		this.name = name;
+	private String name;
+	private int sumPointDifferential = 0, rank = 0, totalNumGames = 0;
+	private Map<String, Integer> season;
 	
+	/**
+	 * Constructor for Team object
+	 * 
+	 * @param inputName the name of this team
+	 */
+	public Team(String inputName) {
+		season = new Map<>();
+		this.name = inputName;
 	}
+	
 	/**
 	 * @return the rank
 	 */
@@ -31,7 +36,7 @@ public class Team {
 	public void setRank(int rank) {
 		this.rank = rank;
 	}
-	Map<String, Integer> season;
+	
 	/**
 	 * @return the name
 	 */
@@ -71,13 +76,13 @@ public class Team {
 	/**
 	 * @return the season
 	 */
-	public Map getSeason() {
+	public Map<String, Integer> getSeason() {
 		return season;
 	}
 	/**
 	 * @param season the season to set
 	 */
-	public void setSeason(Map season) {
+	public void setSeason(Map<String, Integer> season) {
 		this.season = season;
 	}
 	/**
@@ -95,6 +100,4 @@ public class Team {
 			season.putIfAbsent(name, -1);
 		}
 	}
-	
-
 }
