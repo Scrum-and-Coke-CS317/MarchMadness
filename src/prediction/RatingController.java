@@ -1,8 +1,7 @@
 package prediction;
 
-
 import java.io.FileWriter;
-import java.util.ArrayList;
+import java.util.*;
 
 /**
  * @author scrum-and-coke
@@ -52,7 +51,7 @@ public class RatingController {
 		System.out.println("Printing to file...");
 		outputRanking(arr1);
 	}
-	
+
 	/**
 	 * this does nothing yet
 	 * @param teamName
@@ -94,18 +93,36 @@ public class RatingController {
 			csvWriter.append(", ");
 			csvWriter.append("TeamName");
 			csvWriter.append("\n");
-			
+
 			for (Team team : teamsSortedByRank) { 
 				csvWriter.write(team.getRank() + ", " + team.getName());
 				csvWriter.append("\n");
 			}
-			
+
 			csvWriter.flush();
 			csvWriter.close();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
+	}
+
+
+	public void outputRating(ArrayList<Team> teams) {
+		Collections.sort(teams, new RankingComparator());
+	}
+}
+
+class RankingComparator implements Comparator<Team>{
+
+	public int compare(Team team1, Team team2){
+
+		if( team1.getRank() > team2.getRank() ){
+			return 1;
+		}else if( team1.getRank() > team2.getRank() ){
+			return -1;
+		}else{
+			return 0;
+		}
 
 	}
 }
