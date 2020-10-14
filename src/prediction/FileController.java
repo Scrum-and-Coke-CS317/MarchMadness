@@ -8,7 +8,12 @@ package prediction;
  *
  */
 public class FileController {
-	private ArrayList<Team> teamList;
+	private HashMap<String, Team> teamHashMap;
+	
+	/**
+	 * default constructor for FileController object
+	 */
+	public FileController() {this.teamHashMap = new HashMap<>();}
 	
 	/**
 	 * Constructs a FileController object.
@@ -17,9 +22,23 @@ public class FileController {
 	 * data fields are date(year, month, day), team1, team1Score, team2, team2Score.
 	 * Also note team with higher score preceded with an @ symbol
 	 * 
-	 * @param inputFileLocation the location of the input file in relation to this folder
+	 * @param inputFile the input CSV file to be processed
 	 */
-	public FileController(String inputFileLocation) {
-		teamList = new ArrayList<>();
+	public FileController(File inputFile) {
+		teamList = new HashMap<>();
 	}
+	
+	/**
+	 * teamHashMap getter
+	 * 
+	 * @return the teamHashMap for this FileController
+	 */
+	public HashMap<String, Team> getTeamHashMap() {return this.teamHashMap;}
+	
+	/**
+	 * teamHashMap setter
+	 * 
+	 * @param inputMap the new teamHashMap for this FileController
+	 */
+	public void setTeamHashMap(HashMap<String, Team> inputMap) {this.teamHashMap = inputHashMap;}
 }
