@@ -35,13 +35,8 @@ public class FileController {
 	 */
 	public FileController(File inputFile) throws FileNotFoundException{
 		allTeams = new HashMap<>();
-		Scanner input;
-		try {
-			input = new Scanner(inputFile);
-		}
-		catch(FileNotFoundException e) {
-			e.printStackTrace();
-		}
+		Scanner input = new Scanner(inputFile);
+		// deleted try catch, due to errors. may want to re-add error checking.
 		
 		//process csv data into allTeams hashmap
 		while(input.hasNextLine()) {
@@ -66,10 +61,14 @@ public class FileController {
 	}
 	
 	/**@return allTeams for this FileController*/
-	public HashMap<String, Team> getAllTeams() {return this.allTeams;}
+	public HashMap<String, Team> getAllTeams(){
+		return this.allTeams;
+	}
 	
 	/**@param inputMap the new allTeams for this FileController*/
-	public void setAllTeams(HashMap<String, Team> inputMap) {this.allTeams = inputHashMap;}
+	public void setAllTeams(HashMap<String, Team> inputMap) {
+		this.allTeams = inputMap;
+	}
 	
 
 //////////////////////////////HELPER METHODS//////////////////////////////
@@ -89,8 +88,9 @@ public class FileController {
 		else {team = allTeams.get(teamName);}
 		
 		//adjust the attributes for the game.
-		team.setSumPointDifferential(team.getSumPointDifferent() + sumPointDifferential);
-		team.setTotalNumGames(team.getTotalNumGames()++);
+		team.setSumPointDifferential(team.getSumPointDifferential() + sumPointDifferential);
+		int tempTotalGames = team.getTotalNumGames();
+		team.setTotalNumGames(tempTotalGames++);
 		team.addGameToSeason(rivalName);
 		
 		allTeams.put(teamName, team);

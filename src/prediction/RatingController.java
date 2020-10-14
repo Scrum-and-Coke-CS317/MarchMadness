@@ -22,34 +22,30 @@ public class RatingController {
 
 		ArrayList<Team> arr1= new ArrayList<Team>();
 
-		Team tempTeam4 = new Team();
-		tempTeam4.setName("team4");
+		Team tempTeam4 = new Team("team4");
 		tempTeam4.setRank(4);
 		arr1.add(tempTeam4);
 
-		Team tempTeam2 = new Team();
-		tempTeam2.setName("team2");
+		Team tempTeam2 = new Team("team2");
 		tempTeam2.setRank(2);
 		arr1.add(tempTeam2);
 
-		Team tempTeam1 = new Team();
-		tempTeam1.setName("team1");
+		Team tempTeam1 = new Team("team1");
 		tempTeam1.setRank(1);
 		arr1.add(tempTeam1);
 
-		Team tempTeam3 = new Team();
-		tempTeam3.setName("team3");
+		Team tempTeam3 = new Team("team3");
 		tempTeam3.setRank(3);
 		arr1.add(tempTeam3);
 
-		Team tempTeam5 = new Team();
-		tempTeam5.setName("team5");
+		Team tempTeam5 = new Team("team5");
 		tempTeam5.setRank(5);
 		arr1.add(tempTeam5);
 
+		outputRanking(arr1);
 		teamRatingSelectionSort(arr1);
 		System.out.println("Printing to file...");
-		outputRanking(arr1);
+		//outputRanking(arr1);
 	}
 
 	/**
@@ -90,7 +86,7 @@ public class RatingController {
 
 		try(FileWriter csvWriter = new FileWriter("file/ranking.csv")){
 			csvWriter.append("Rank");
-			csvWriter.append(", ");
+			csvWriter.append(",");
 			csvWriter.append("TeamName");
 			csvWriter.append("\n");
 
