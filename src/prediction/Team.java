@@ -89,6 +89,4 @@ public class Team {
 			season.putIfAbsent(name, -1);
 		}
 	}
-	
-
 }

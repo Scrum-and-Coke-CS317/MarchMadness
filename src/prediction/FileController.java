@@ -1,4 +1,8 @@
 package prediction;
+import java.util.HashMap;
+import java.io.File;
+import java.util.Scanner;
+import java.io.FileNotFoundException;
 
 /**
  * @author Devin Murphy
@@ -8,12 +12,12 @@ package prediction;
  *
  */
 public class FileController {
-	private HashMap<String, Team> teamHashMap;
+	private HashMap<String, Team> allTeams;
 	
 	/**
 	 * default constructor for FileController object
 	 */
-	public FileController() {this.teamHashMap = new HashMap<>();}
+	public FileController() {this.allTeams = new HashMap<>();}
 	
 	/**
 	 * Constructs a FileController object.
@@ -24,21 +28,38 @@ public class FileController {
 	 * 
 	 * @param inputFile the input CSV file to be processed
 	 */
-	public FileController(File inputFile) {
-		teamList = new HashMap<>();
+	public FileController(File inputFile) throws FileNotFoundException{
+		allTeams = new HashMap<>();
+		Scanner input;
+		try {
+			input = new Scanner(inputFile);
+		}
+		catch(FileNotFoundException e) {
+			e.printStackTrace();
+		}
+		
+		//process csv data into allTeams hashmap
+		while(input.hasNextLine()) {
+			String inputRow = input.nextLine();
+			
+		}
+		
+		input.close();
 	}
 	
 	/**
-	 * teamHashMap getter
+	 * allTeams getter
 	 * 
-	 * @return the teamHashMap for this FileController
+	 * @return the allTeams for this FileController
 	 */
-	public HashMap<String, Team> getTeamHashMap() {return this.teamHashMap;}
+	public HashMap<String, Team> getallTeams() {return this.allTeams;}
 	
 	/**
-	 * teamHashMap setter
+	 * allTeams setter
 	 * 
-	 * @param inputMap the new teamHashMap for this FileController
+	 * @param inputMap the new allTeams for this FileController
 	 */
-	public void setTeamHashMap(HashMap<String, Team> inputMap) {this.teamHashMap = inputHashMap;}
+	public void setallTeams(HashMap<String, Team> inputMap) {this.allTeams = inputHashMap;}
 }
+
+//////////////////////////////HELPER METHODS//////////////////////////////
