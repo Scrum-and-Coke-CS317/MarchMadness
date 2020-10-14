@@ -8,7 +8,8 @@ import java.util.*;
  *
  */
 public class RatingController {
-
+	ArrayList<Team> allTeams = new ArrayList<Team>();
+	
 	private int[][] teamMatrix;
 	private int[] pointDeferentials;
 
