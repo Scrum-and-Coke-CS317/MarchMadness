@@ -50,6 +50,7 @@ public class FileController {
 			String[] lineAttributes = line.split(",");
 			
 			if (lineAttributes.length == numAttributes) {
+				//read important attributes from the line
 				String team1Name = lineAttributes[team1Index];
 				String team2Name = lineAttributes[team2Index];
 				int team1Score = Integer.parseInt(lineAttributes[team1ScoreIndex]);
@@ -87,6 +88,7 @@ public class FileController {
 		if (!allTeams.containsKey(teamName)) {team = new Team(teamName);}
 		else {team = allTeams.get(teamName);}
 		
+		//adjust the attributes for the game.
 		team.setSumPointDifferential(team.getSumPointDifferent() + sumPointDifferential);
 		team.setTotalNumGames(team.getTotalNumGames()++);
 		team.addGameToSeason(rivalName);
