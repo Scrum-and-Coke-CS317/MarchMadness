@@ -13,6 +13,14 @@ public class Team {
 	String name;
 	int sumPointDifferential = 0, rank = 0, totalNumGames = 0;
 	Map<String, Integer> season;
+	
+	/**
+	 * default constructor for Team object
+	 */
+	public Team() {
+		season = new Map<>();
+	}
+	
 	/**
 	 * @return the rank
 	 */
