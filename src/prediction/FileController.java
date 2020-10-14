@@ -69,7 +69,7 @@ public class FileController {
 	public HashMap<String, Team> getAllTeams() {return this.allTeams;}
 	
 	/**@param inputMap the new allTeams for this FileController*/
-	public void setAllTeams(HashMap<String, Team> inputMap) {this.allTeams = inputHashMap;}
+	public void setAllTeams(HashMap<String, Team> inputMap) {this.allTeams = inputMap;}
 	
 
 //////////////////////////////HELPER METHODS//////////////////////////////
