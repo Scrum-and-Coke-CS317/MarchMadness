@@ -5,6 +5,8 @@ package prediction;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+import java.util.ArrayList;
+
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -14,12 +16,14 @@ import org.junit.jupiter.api.Test;
  *
  */
 class RatingControllerTest {
-
+	private ArrayList<Team> teams = new ArrayList<Team>();
 	/**
 	 * @throws java.lang.Exception
 	 */
 	@BeforeEach
 	void setUp() throws Exception {
+		Team one = new Team("one");
+		one.setSumPointDifferential();
 	}
 
 	/**
