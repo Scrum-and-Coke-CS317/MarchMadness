@@ -22,7 +22,9 @@ public class FileController {
 	/**
 	 * default constructor for FileController object
 	 */
-	public FileController() {this.allTeams = new HashMap<>();}
+	public FileController() {
+		this.allTeams = new HashMap<>();
+	}
 	
 	/**
 	 * Constructs a FileController object.

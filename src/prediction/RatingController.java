@@ -54,41 +54,42 @@ public class RatingController {
 		}
 		
 	}
-	/**
-	 * tests sorting the arrayList and printing it to a file
-	 * 
-	 * Please Delete and Create Test Class
-	 * @param a
-	 */
-	public static void main(String args[]){
-
-		ArrayList<Team> arr1= new ArrayList<Team>();
-
-		Team tempTeam4 = new Team("team4");
-		tempTeam4.setRank(4);
-		arr1.add(tempTeam4);
-
-		Team tempTeam2 = new Team("team2");
-		tempTeam2.setRank(2);
-		arr1.add(tempTeam2);
-
-		Team tempTeam1 = new Team("team1");
-		tempTeam1.setRank(1);
-		arr1.add(tempTeam1);
-
-		Team tempTeam3 = new Team("team3");
-		tempTeam3.setRank(3);
-		arr1.add(tempTeam3);
-
-		Team tempTeam5 = new Team("team5");
-		tempTeam5.setRank(5);
-		arr1.add(tempTeam5);
-
-		
-		teamRatingSelectionSort(arr1);
-		System.out.println("Printing to file...");
-		System.out.println(outputRanking(arr1));
-	}
+	//DELETE THIS
+//	/**
+//	 * tests sorting the arrayList and printing it to a file
+//	 * 
+//	 * Please Delete and Create Test Class
+//	 * @param a
+//	 */
+//	public static void main(String args[]){
+//
+//		ArrayList<Team> arr1= new ArrayList<Team>();
+//
+//		Team tempTeam4 = new Team("team4");
+//		tempTeam4.setRank(4);
+//		arr1.add(tempTeam4);
+//
+//		Team tempTeam2 = new Team("team2");
+//		tempTeam2.setRank(2);
+//		arr1.add(tempTeam2);
+//
+//		Team tempTeam1 = new Team("team1");
+//		tempTeam1.setRank(1);
+//		arr1.add(tempTeam1);
+//
+//		Team tempTeam3 = new Team("team3");
+//		tempTeam3.setRank(3);
+//		arr1.add(tempTeam3);
+//
+//		Team tempTeam5 = new Team("team5");
+//		tempTeam5.setRank(5);
+//		arr1.add(tempTeam5);
+//
+//		
+//		teamRatingSelectionSort(arr1);
+//		System.out.println("Printing to file...");
+//		System.out.println(outputRanking(arr1));
+//	}
 
 
 	/**
