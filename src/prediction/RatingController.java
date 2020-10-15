@@ -14,12 +14,20 @@ public class RatingController {
 	private double[][] teamMatrix;
 	private double[][] pointDifferentials;
 	private ArrayList<Team> teams;
+	/**
+	 * initializes the matrix and sets teams
+	 * 
+	 * @param teams
+	 */
 	public RatingController(ArrayList<Team> teams){
 		this.teams = teams;
 		initMatrix();
 		
 	}
 	
+	/**
+	 * initializes the matrix
+	 */
 	private void initMatrix() {
 		for(int y = 0; y <= teams.size(); y++) {
 			HashMap temp = teams.get(y).getSeason();
@@ -42,7 +50,10 @@ public class RatingController {
 		pointDifferentialsMatrix = new Matrix(pointDifferentials);
 		
 	}
-	
+	/**
+	 * sets the ranks for all the teams in the array.
+	 * @param teams
+	 */
 	public void rankTeams(ArrayList<Team> teams) {
 		double det = season.det();
 		season = season.inverse();

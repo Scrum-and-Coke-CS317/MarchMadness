@@ -87,8 +87,12 @@ public class FileController {
  */
 	private void updateTeamInfo(String teamName, String rivalName, int sumPointDifferential) {
 		Team team;
-		if (!allTeams.containsKey(teamName)) {team = new Team(teamName);}
-		else {team = allTeams.get(teamName);}
+		if (!allTeams.containsKey(teamName)) {
+			team = new Team(teamName);
+			}
+		else {
+			team = allTeams.get(teamName);
+		}
 		
 		//adjust the attributes for the game.
 		team.setSumPointDifferential(team.getSumPointDifferential() + sumPointDifferential);
