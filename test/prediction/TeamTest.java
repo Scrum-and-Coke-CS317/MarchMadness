@@ -30,21 +30,21 @@ class TeamTest {
 		
 		//create team (lost against cokeTeam)
 		scrumTeam.setRank(1);
-		Map<String, Integer> season1 = new HashMap<>();
+		HashMap<String, Integer> season1 = new HashMap<>();
 		scrumTeam.setSeason(season1);
 		scrumTeam.setSumPointDifferential(0);
 		scrumTeam.setTotalNumGames(1);
 		
 		//create second team (empty season)
 		andTeam.setRank(1);
-		Map<String, Integer> season2 = new HashMap<>();
+		HashMap<String, Integer> season2 = new HashMap<>();
 		andTeam.setSeason(season2);
 		andTeam.setSumPointDifferential(0);
 		andTeam.setTotalNumGames(0);
 		
 		//create third team (won against scrumTeam)
 		cokeTeam.setRank(1);
-		Map<String, Integer> season3 = new HashMap<>();
+		HashMap<String, Integer> season3 = new HashMap<>();
 		season3.put("scrumTeam", -1);
 		cokeTeam.setSeason(season3);
 		cokeTeam.setSumPointDifferential(0);
