@@ -1,4 +1,6 @@
 package prediction;
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.HashMap;
 import java.io.File;
 import java.util.Scanner;
@@ -36,12 +38,9 @@ public class FileController {
 	public FileController(File inputFile) throws FileNotFoundException{
 		allTeams = new HashMap<>();
 		Scanner input;
-		try {
+		
 			input = new Scanner(inputFile);
-		}
-		catch(FileNotFoundException e) {
-			e.printStackTrace();
-		}
+	
 		
 		//process csv data into allTeams hashmap
 		while(input.hasNextLine()) {
@@ -65,10 +64,7 @@ public class FileController {
 		input.close();
 	}
 	
-<<<<<<< Updated upstream
-	/**@return allTeams for this FileController*/
-	public HashMap<String, Team> getAllTeams() {return this.allTeams;}
-=======
+
 	/**
 	 * @return allTeams for this FileController
 	 */
@@ -80,10 +76,10 @@ public class FileController {
 	            = new ArrayList<>(values);
 		return listOfValues;
 	}
->>>>>>> Stashed changes
+
 	
 	/**@param inputMap the new allTeams for this FileController*/
-	public void setAllTeams(HashMap<String, Team> inputMap) {this.allTeams = inputHashMap;}
+	public void setAllTeams(HashMap<String, Team> inputMap) {this.allTeams = inputMap;}
 	
 
 //////////////////////////////HELPER METHODS//////////////////////////////
@@ -103,8 +99,8 @@ public class FileController {
 		else {team = allTeams.get(teamName);}
 		
 		//adjust the attributes for the game.
-		team.setSumPointDifferential(team.getSumPointDifferent() + sumPointDifferential);
-		team.setTotalNumGames(team.getTotalNumGames()++);
+		team.setSumPointDifferential(team.getSumPointDifferential() + sumPointDifferential);
+		team.setTotalNumGames(team.getTotalNumGames() + 1);
 		team.addGameToSeason(rivalName);
 		
 		allTeams.put(teamName, team);
