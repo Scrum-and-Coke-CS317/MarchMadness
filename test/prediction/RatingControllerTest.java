@@ -28,7 +28,7 @@ class RatingControllerTest {
 		Team one = new Team("one");
 		one.setSumPointDifferential(-40);
 		one.setTotalNumGames(4);
-		HashMap<String, Integer> mapOne = new HashMap<String, Integer>();
+		HashMap<String, Integer> mapOne = new HashMap<String,Integer>();
 		mapOne.put("one", 4);
 		mapOne.put("two", -1);
 		mapOne.put("three", -1);
@@ -39,7 +39,7 @@ class RatingControllerTest {
 		Team two = new Team("two");
 		two.setSumPointDifferential(32);
 		two.setTotalNumGames(4);
-		HashMap<String, Integer> mapTwo = new HashMap<String, Integer>();
+		HashMap<String,Integer> mapTwo = new HashMap<String,Integer>();
 		mapTwo.put("one", -1);
 		mapTwo.put("two", 4);
 		mapTwo.put("three", -1);
@@ -50,7 +50,7 @@ class RatingControllerTest {
 		Team three = new Team("three");
 		three.setSumPointDifferential(15);
 		three.setTotalNumGames(4);
-		HashMap<String, Integer> mapThree = new HashMap<String, Integer>();
+		HashMap<String,Integer> mapThree = new HashMap<String,Integer>();
 		mapThree.put("one", -1);
 		mapThree.put("two", -1);
 		mapThree.put("three", 4);
@@ -61,7 +61,7 @@ class RatingControllerTest {
 		Team four = new Team("four");
 		four.setSumPointDifferential(103);
 		four.setTotalNumGames(4);
-		HashMap<String, Integer> mapFour = new HashMap<String, Integer>();
+		HashMap<String,Integer> mapFour = new HashMap<String,Integer>();
 		mapFour.put("one", -1);
 		mapFour.put("two", -1);
 		mapFour.put("three", -1);
@@ -72,7 +72,7 @@ class RatingControllerTest {
 		Team five = new Team("five");
 		five.setSumPointDifferential(-106);
 		five.setTotalNumGames(4);
-		HashMap<String, Integer> mapFive = new HashMap<String, Integer>();
+		HashMap<String,Integer> mapFive = new HashMap<String,Integer>();
 		mapFive.put("one", -1);
 		mapFive.put("two", -1);
 		mapFive.put("three", -1);
