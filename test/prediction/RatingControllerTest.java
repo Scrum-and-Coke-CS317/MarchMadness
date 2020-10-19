@@ -113,11 +113,11 @@ class RatingControllerTest {
 
 		
 		rController.rankTeams();
-		assertTrue(teams.get(0).getRank() == 0.496);
-		assertTrue(teams.get(1).getRank() == -0.08);
-		assertTrue(teams.get(2).getRank() == 0.056);
-		assertTrue(teams.get(3).getRank() == -0.648);
-		assertTrue(teams.get(4).getRank() == -0.176);
+		assertTrue(Math.round(teams.get(0).getRank() * 100.0)/100.0 == 0.50);
+		assertTrue(Math.round(teams.get(1).getRank() * 100.0)/100.0  == -0.08);
+		assertTrue(Math.round(teams.get(2).getRank() * 100.0)/100.0  == 0.06);
+		assertTrue(Math.round(teams.get(3).getRank() * 100.0)/100.0  == -0.65);
+		assertTrue(Math.round(teams.get(4).getRank() * 100.0)/100.0  == -0.18);
 
 	}
 
