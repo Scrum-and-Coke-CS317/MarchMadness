@@ -3,8 +3,9 @@
  */
 package prediction;
 
-import java.util.HashMap;
-import java.util.Map;
+
+import java.util.*;
+
 
 /**
  * @author zeemh
@@ -22,7 +23,9 @@ public class Team {
 	 * @param inputName the name of this team
 	 */
 	public Team(String inputName) {
-		season = new HashMap<>();
+
+		season = new HashMap<String, Integer>();
+
 		this.name = inputName;
 		rank = 0.0;
 	}

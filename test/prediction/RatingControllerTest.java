@@ -6,7 +6,9 @@ package prediction;
 import static org.junit.jupiter.api.Assertions.*;
 
 import java.util.ArrayList;
+
 import java.util.HashMap;
+
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
@@ -18,12 +20,15 @@ import org.junit.jupiter.api.Test;
  */
 class RatingControllerTest {
 	private ArrayList<Team> teams = new ArrayList<Team>();
+
 	private RatingController rController;
+
 	/**
 	 * @throws java.lang.Exception
 	 */
 	@BeforeEach
 	void setUp() throws Exception {
+
 		
 		Team one = new Team("one");
 		one.setSumPointDifferential(-40);
@@ -87,6 +92,7 @@ class RatingControllerTest {
 		teams.add(five);
 		
 		rController = new RatingController(teams);
+
 	}
 
 	/**
@@ -94,7 +100,9 @@ class RatingControllerTest {
 	 */
 	@AfterEach
 	void tearDown() throws Exception {
+
 		teams.clear();
+
 	}
 
 	/**
@@ -102,6 +110,7 @@ class RatingControllerTest {
 	 */
 	@Test
 	void testRankTeams() {
+
 		
 		rController.rankTeams();
 		assertTrue(teams.get(0).getRank() == 0.496);
@@ -109,7 +118,7 @@ class RatingControllerTest {
 		assertTrue(teams.get(2).getRank() == 0.056);
 		assertTrue(teams.get(3).getRank() == -0.648);
 		assertTrue(teams.get(4).getRank() == -0.176);
-		
+
 	}
 
 	/**
@@ -117,6 +126,7 @@ class RatingControllerTest {
 	 */
 	@Test
 	void testTeamRatingSelectionSort() {
+
 		rController.rankTeams();
 		rController.teamRatingSelectionSort();
 		assertTrue(teams.get(0).getName().equals("one"));
@@ -124,6 +134,8 @@ class RatingControllerTest {
 		assertTrue(teams.get(2).getName().equals("two"));
 		assertTrue(teams.get(3).getName().equals("five"));
 		assertTrue(teams.get(4).getName().equals("four"));
+
+
 	}
 
 }

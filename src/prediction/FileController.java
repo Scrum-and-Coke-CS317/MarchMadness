@@ -24,7 +24,9 @@ public class FileController {
 	/**
 	 * default constructor for FileController object
 	 */
-	public FileController() {this.allTeams = new HashMap<>();}
+	public FileController() {
+		this.allTeams = new HashMap<>();
+	}
 	
 	/**
 	 * Constructs a FileController object.
@@ -37,15 +39,18 @@ public class FileController {
 	 */
 	public FileController(File inputFile) throws FileNotFoundException{
 		allTeams = new HashMap<>();
+
 		Scanner input;
 		
 			input = new Scanner(inputFile);
 	
+
 		
 		//process csv data into allTeams hashmap
 		while(input.hasNextLine()) {
 			String line = input.nextLine();
 			line.trim();
+			line.replace("@", "");
 			String[] lineAttributes = line.split(",");
 			
 			if (lineAttributes.length == numAttributes) {
@@ -65,9 +70,11 @@ public class FileController {
 	}
 	
 
+
 	/**
 	 * @return allTeams for this FileController
 	 */
+
 	public ArrayList<Team> getAllTeams(){
 		 Collection<Team> values = allTeams.values(); 
 		  
@@ -79,7 +86,10 @@ public class FileController {
 
 	
 	/**@param inputMap the new allTeams for this FileController*/
-	public void setAllTeams(HashMap<String, Team> inputMap) {this.allTeams = inputMap;}
+	public void setAllTeams(HashMap<String, Team> inputMap) {
+		this.allTeams = inputMap;
+	}
+
 	
 
 //////////////////////////////HELPER METHODS//////////////////////////////
@@ -95,12 +105,18 @@ public class FileController {
  */
 	private void updateTeamInfo(String teamName, String rivalName, int sumPointDifferential) {
 		Team team;
-		if (!allTeams.containsKey(teamName)) {team = new Team(teamName);}
-		else {team = allTeams.get(teamName);}
+		if (!allTeams.containsKey(teamName)) {
+			team = new Team(teamName);
+			}
+		else {
+			team = allTeams.get(teamName);
+		}
 		
 		//adjust the attributes for the game.
 		team.setSumPointDifferential(team.getSumPointDifferential() + sumPointDifferential);
+
 		team.setTotalNumGames(team.getTotalNumGames() + 1);
+
 		team.addGameToSeason(rivalName);
 		
 		allTeams.put(teamName, team);
