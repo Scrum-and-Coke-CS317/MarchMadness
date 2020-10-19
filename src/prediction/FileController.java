@@ -1,4 +1,6 @@
 package prediction;
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.HashMap;
 import java.io.File;
 import java.util.Scanner;
@@ -64,8 +66,13 @@ public class FileController {
 	}
 	
 	/**@return allTeams for this FileController*/
-	public HashMap<String, Team> getAllTeams(){
-		return this.allTeams;
+	public ArrayList<Team> getAllTeams(){
+		 Collection<Team> values = allTeams.values(); 
+		  
+	        // Creating an ArrayList of values 
+	        ArrayList<Team> listOfValues 
+	            = new ArrayList<>(values);
+		return listOfValues;
 	}
 	
 	/**@param inputMap the new allTeams for this FileController*/
