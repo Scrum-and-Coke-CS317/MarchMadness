@@ -42,8 +42,16 @@ public class RatingController {
 		pointDifferentialsMatrix = new Matrix(pointDifferentials);
 		
 	}
+<<<<<<< Updated upstream
 	
 	public void rankTeams(ArrayList<Team> teams) {
+=======
+	/**
+	 * sets the ranks for all the teams in the array.
+	 * @param teams
+	 */
+	public void rankTeams() {
+>>>>>>> Stashed changes
 		double det = season.det();
 		season = season.inverse();
 		season = season.times(1/det);
@@ -99,18 +107,18 @@ public class RatingController {
 	 * This is a selection sorting algorithm to order Teams by their rankings
 	 * @param arr an array of teams
 	 */
-	public static void teamRatingSelectionSort(ArrayList<Team> arr){
-		for (int i = 0; i < arr.size(); i++) {
+	public void teamRatingSelectionSort(){
+		for (int i = 0; i < teams.size(); i++) {
 			// find position of smallest rank between (i + 1)th element and last element
 			int pos = i;
-			for (int j = i; j < arr.size(); j++) {
-				if (arr.get(j).getRank() < arr.get(pos).getRank())
+			for (int j = i; j < teams.size(); j++) {
+				if (teams.get(j).getRank() < teams.get(pos).getRank())
 					pos = j;
 			}
 			// Swap min (smallest rank) to current position on array
-			Team min = arr.get(pos);
-			arr.set(pos, arr.get(i));
-			arr.set(i, min);
+			Team min = teams.get(pos);
+			teams.set(pos, teams.get(i));
+			teams.set(i, min);
 		}
 	}
 
@@ -118,17 +126,28 @@ public class RatingController {
 	 * This creates a csv file containing all the Teams Sorted by their Rank
 	 * @param teamsSortedByRank
 	 */
+<<<<<<< Updated upstream
 	public static void outputRanking(ArrayList<Team> teamsSortedByRank) {
 
+=======
+	public String outputRanking() {
+		String output = "Rank,TeamName\n";
+>>>>>>> Stashed changes
 		try(FileWriter csvWriter = new FileWriter("file/ranking.csv")){
 			csvWriter.append("Rank");
 			csvWriter.append(", ");
 			csvWriter.append("TeamName");
 			csvWriter.append("\n");
 
+<<<<<<< Updated upstream
 			for (Team team : teamsSortedByRank) { 
 				csvWriter.write(team.getRank() + ", " + team.getName());
 				csvWriter.append("\n");
+=======
+			for (Team team : teams) { 
+				csvWriter.write(team.getRank() + ", " + team.getName()+"\n");
+				output += team.getRank() + ", " + team.getName()+"\n";
+>>>>>>> Stashed changes
 			}
 
 			csvWriter.flush();

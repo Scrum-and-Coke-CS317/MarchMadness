@@ -65,8 +65,22 @@ public class FileController {
 		input.close();
 	}
 	
+<<<<<<< Updated upstream
 	/**@return allTeams for this FileController*/
 	public HashMap<String, Team> getAllTeams() {return this.allTeams;}
+=======
+	/**
+	 * @return allTeams for this FileController
+	 */
+	public ArrayList<Team> getAllTeams(){
+		 Collection<Team> values = allTeams.values(); 
+		  
+	        // Creating an ArrayList of values 
+	        ArrayList<Team> listOfValues 
+	            = new ArrayList<>(values);
+		return listOfValues;
+	}
+>>>>>>> Stashed changes
 	
 	/**@param inputMap the new allTeams for this FileController*/
 	public void setAllTeams(HashMap<String, Team> inputMap) {this.allTeams = inputHashMap;}
