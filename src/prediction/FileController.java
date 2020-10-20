@@ -39,8 +39,12 @@ public class FileController {
 	 */
 	public FileController(File inputFile) throws FileNotFoundException{
 		allTeams = new HashMap<>();
-		Scanner input = new Scanner(inputFile);
-		// deleted try catch, due to errors. may want to re-add error checking.
+
+		Scanner input;
+		
+			input = new Scanner(inputFile);
+	
+
 		
 		//process csv data into allTeams hashmap
 		while(input.hasNextLine()) {
@@ -65,20 +69,22 @@ public class FileController {
 		input.close();
 	}
 	
-	/**@return allTeams for this FileController*/
-	public ArrayList<Team> getAllTeams(){
-		 Collection<Team> values = allTeams.values(); 
-		  
-	        // Creating an ArrayList of values 
-	        ArrayList<Team> listOfValues 
-	            = new ArrayList<>(values);
-		return listOfValues;
+
+
+	/**
+	 * @return allTeams for this FileController
+	 */
+
+	public HashMap<String,Team> getAllTeams(){
+		return allTeams;
 	}
+
 	
 	/**@param inputMap the new allTeams for this FileController*/
 	public void setAllTeams(HashMap<String, Team> inputMap) {
 		this.allTeams = inputMap;
 	}
+
 	
 
 //////////////////////////////HELPER METHODS//////////////////////////////
@@ -103,8 +109,9 @@ public class FileController {
 		
 		//adjust the attributes for the game.
 		team.setSumPointDifferential(team.getSumPointDifferential() + sumPointDifferential);
-		int tempTotalGames = team.getTotalNumGames();
-		team.setTotalNumGames(tempTotalGames++);
+
+		team.setTotalNumGames(team.getTotalNumGames() + 1);
+
 		team.addGameToSeason(rivalName);
 		
 		allTeams.put(teamName, team);

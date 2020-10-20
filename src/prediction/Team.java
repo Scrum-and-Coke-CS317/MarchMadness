@@ -3,7 +3,9 @@
  */
 package prediction;
 
+
 import java.util.*;
+
 
 /**
  * @author zeemh
@@ -21,16 +23,18 @@ public class Team {
 	 * @param inputName the name of this team
 	 */
 	public Team(String inputName) {
+
 		season = new HashMap<String, Integer>();
+
 		this.name = inputName;
-		rank = 0.0;
+		
 	}
 	
 	/**
 	 * @return the rank
 	 */
 	public double getRank() {
-		return rank;
+		return this.rank;
 	}
 	/**
 	 * @param rank the rank to set
