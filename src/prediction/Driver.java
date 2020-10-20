@@ -18,6 +18,7 @@ public class Driver {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		File file = new File("file/mcb2019CSV.csv");
+		//new MyFrame(); work in progress
 		FileController fc = null;
 		
 		try {
@@ -27,7 +28,10 @@ public class Driver {
 			System.out.println("fileNotFound");
 			System.out.println(file.getPath());
 		}
+		System.out.println(fc.getAllTeams());
 		RatingController rc = new RatingController(fc.getAllTeams());
+		rc.rankTeams();
+		
 		
 		
 	}

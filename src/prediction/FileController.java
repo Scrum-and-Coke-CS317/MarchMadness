@@ -50,7 +50,7 @@ public class FileController {
 		while(input.hasNextLine()) {
 			String line = input.nextLine();
 			line.trim();
-			line.replace("@", "");
+			line = line.replace("@", "");
 			String[] lineAttributes = line.split(",");
 			
 			if (lineAttributes.length == numAttributes) {
