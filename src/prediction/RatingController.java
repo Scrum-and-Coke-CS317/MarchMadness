@@ -15,15 +15,20 @@ public class RatingController {
 	private double[][] teamMatrix;
 	private double[][] pointDifferentials;
 	private ArrayList<Team> teams;
-
+	private HashMap<String,Team> teamsMap;
+	private String[] mapKeys;
 	/**
 	 * initializes the matrix and sets teams
 	 * 
 	 * @param teams
 	 */
-	public RatingController(ArrayList<Team> teams){
-		this.teams = teams;
-		int size = teams.size();
+	public RatingController(HashMap<String,Team> teams){
+		this.teamsMap = teams;
+		 Collection<Team> values = teams.values(); 
+		  
+	        // Creating an ArrayList of values 
+	        this.teams = new ArrayList<>(values);
+		int size = this.teams.size();
 		 pointDifferentials = new double[1][size];
 		 teamMatrix = new double[size][size];
 		initMatrix();
@@ -36,8 +41,13 @@ public class RatingController {
 	 */
 
 	private void initMatrix() {
+		Object[] mapObjectKeys = teamsMap.keySet().toArray();
+		mapKeys = Arrays.copyOf(mapObjectKeys,mapObjectKeys.length,
+				String[].class);
+		sort(mapKeys, 0, mapKeys.length - 1);
 		for (int y = 0; y < teams.size(); y++) {
-			HashMap<String, Integer> temp = teams.get(y).getSeason();
+			HashMap<String, Integer> temp = getTeam(mapKeys[y]).getSeason();
+			
 			Object[] objectKeys = temp.keySet().toArray();
 			String[] keys = Arrays.copyOf(objectKeys,objectKeys.length,
 					String[].class);
@@ -50,7 +60,7 @@ public class RatingController {
 			if (y == teams.size() - 1)
 				pointDifferentials[0][y] = 0;
 			else {
-				pointDifferentials[0][y] = teams.get(y).getSumPointDifferential();
+				pointDifferentials[0][y] = getTeam(mapKeys[y]).getSumPointDifferential();
 			}
 			for (int x = 0; x < teams.size(); x++) {
 				if (x == teams.size() - 1) {
@@ -58,16 +68,22 @@ public class RatingController {
 
 				} 
 				else {
-					teamMatrix[x][y] = gamesPlayed[y];
+					teamMatrix[x][y] = gamesPlayed[x];
 				}
 			}
 		}
 		season = new Matrix(teamMatrix);
 		pointDifferentialsMatrix = new Matrix(pointDifferentials);
-		
-		season.print(5, 1);
-		pointDifferentialsMatrix.print(1, 1);
 
+	}
+	
+	private Team getTeam(String teamName) {
+		for(Team i: teams) {
+			if(i.getName().equals(teamName)) {
+				return i;
+			}
+		}
+		return null;
 	}
 	
 	private void merge(String arr[], int l, int m, int r) {
@@ -143,17 +159,20 @@ public class RatingController {
 	 * 
 	 * @param teams
 	 */
-	public void rankTeams() {
+	public HashMap<String, Team> rankTeams() {
 
 
 		double det = season.det();
 		season = season.inverse();
 		season = season.times(1 / det);
-		season = season.times(pointDifferentialsMatrix);
-		double[][] ranks = season.getArrayCopy();
-		for (int i = 0; i < ranks.length; i++) {
-			teams.get(i).setRank(ranks[0][i]);
+		Matrix rankMatrix = pointDifferentialsMatrix.times(season);
+		double[][] ranks = rankMatrix.getArrayCopy();
+		
+		for (int i = 0; i < ranks[0].length; i++) {
+			
+			teamsMap.get(mapKeys[i]).setRank(ranks[0][i]);
 		}
+		return teamsMap;
 
 	}
 

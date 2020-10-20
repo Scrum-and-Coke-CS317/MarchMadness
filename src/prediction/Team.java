@@ -27,14 +27,14 @@ public class Team {
 		season = new HashMap<String, Integer>();
 
 		this.name = inputName;
-		rank = 0.0;
+		
 	}
 	
 	/**
 	 * @return the rank
 	 */
 	public double getRank() {
-		return rank;
+		return this.rank;
 	}
 	/**
 	 * @param rank the rank to set

@@ -5,6 +5,7 @@ package prediction;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 
 import java.util.HashMap;
@@ -19,7 +20,7 @@ import org.junit.jupiter.api.Test;
  *
  */
 class RatingControllerTest {
-	private ArrayList<Team> teams = new ArrayList<Team>();
+	private HashMap<String,Team> teams = new HashMap<String, Team>();
 
 	private RatingController rController;
 
@@ -85,11 +86,11 @@ class RatingControllerTest {
 		mapFive.put("five", 4);
 		five.setSeason(mapFive);
 		
-		teams.add(one);
-		teams.add(two);
-		teams.add(three);
-		teams.add(four);
-		teams.add(five);
+		teams.put("one", one);
+		teams.put("two", two);
+		teams.put("three", three);
+		teams.put("four", four);
+		teams.put("five", five);
 		
 		rController = new RatingController(teams);
 
@@ -110,14 +111,17 @@ class RatingControllerTest {
 	 */
 	@Test
 	void testRankTeams() {
-
+		DecimalFormat df = new DecimalFormat("##.#####");
 		
-		rController.rankTeams();
-		assertTrue(Math.round(teams.get(0).getRank() * 100.0)/100.0 == 0.50);
-		assertTrue(Math.round(teams.get(1).getRank() * 100.0)/100.0  == -0.08);
-		assertTrue(Math.round(teams.get(2).getRank() * 100.0)/100.0  == 0.06);
-		assertTrue(Math.round(teams.get(3).getRank() * 100.0)/100.0  == -0.65);
-		assertTrue(Math.round(teams.get(4).getRank() * 100.0)/100.0  == -0.18);
+		HashMap<String, Team> test = new HashMap<String, Team>();
+				test = rController.rankTeams();
+
+		System.out.println(df.format(test.get("two").getRank()));
+		assertTrue(df.format(test.get("one").getRank()).equals("-0.0128"));
+		assertTrue(df.format(test.get("two").getRank()).equals("0.00896"));
+		assertTrue(df.format(test.get("three").getRank()).equals("0.0048"));
+		assertTrue(df.format(test.get("four").getRank()).equals("0.03296"));
+		assertTrue(df.format(test.get("five").getRank()).equals("-0.03392"));
 
 	}
 
@@ -129,11 +133,11 @@ class RatingControllerTest {
 
 		rController.rankTeams();
 		rController.teamRatingSelectionSort();
-		assertTrue(teams.get(0).getName().equals("one"));
+		assertTrue(teams.get(0).getName().equals("four"));
 		assertTrue(teams.get(1).getName().equals("three"));
 		assertTrue(teams.get(2).getName().equals("two"));
-		assertTrue(teams.get(3).getName().equals("five"));
-		assertTrue(teams.get(4).getName().equals("four"));
+		assertTrue(teams.get(3).getName().equals("one"));
+		assertTrue(teams.get(4).getName().equals("five"));
 
 
 	}

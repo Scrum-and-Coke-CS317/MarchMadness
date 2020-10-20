@@ -75,13 +75,8 @@ public class FileController {
 	 * @return allTeams for this FileController
 	 */
 
-	public ArrayList<Team> getAllTeams(){
-		 Collection<Team> values = allTeams.values(); 
-		  
-	        // Creating an ArrayList of values 
-	        ArrayList<Team> listOfValues 
-	            = new ArrayList<>(values);
-		return listOfValues;
+	public HashMap<String,Team> getAllTeams(){
+		return allTeams;
 	}
 
 	
