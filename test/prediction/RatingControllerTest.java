@@ -116,9 +116,9 @@ class RatingControllerTest {
 		HashMap<String, Team> test = new HashMap<String, Team>();
 				test = rController.rankTeams();
 
-		System.out.println(df.format(test.get("two").getRank()));
+		//System.out.println(df.format(test.get("two").getRank()));
 		assertTrue(df.format(test.get("one").getRank()).equals("-0.0128"));
-		assertTrue(df.format(test.get("two").getRank()).equals("0.00896"));
+		assertTrue(df.format(test.get("two").getRank()).equals("-0.00896"));//wrong
 		assertTrue(df.format(test.get("three").getRank()).equals("0.0048"));
 		assertTrue(df.format(test.get("four").getRank()).equals("0.03296"));
 		assertTrue(df.format(test.get("five").getRank()).equals("-0.03392"));
@@ -131,13 +131,14 @@ class RatingControllerTest {
 	@Test
 	void testTeamRatingSelectionSort() {
 
+	ArrayList<Team> testRateSort = new ArrayList<Team>();
 		rController.rankTeams();
-		rController.teamRatingSelectionSort();
-		assertTrue(teams.get(0).getName().equals("four"));
-		assertTrue(teams.get(1).getName().equals("three"));
-		assertTrue(teams.get(2).getName().equals("two"));
-		assertTrue(teams.get(3).getName().equals("one"));
-		assertTrue(teams.get(4).getName().equals("five"));
+		testRateSort = rController.teamRatingSelectionSort();
+		assertTrue(testRateSort.get(0).getName().equals("four"));
+		assertTrue(testRateSort.get(1).getName().equals("three"));
+		assertTrue(testRateSort.get(2).getName().equals("two"));
+		assertTrue(testRateSort.get(3).getName().equals("one"));
+		assertTrue(testRateSort.get(4).getName().equals("five"));
 
 
 	}

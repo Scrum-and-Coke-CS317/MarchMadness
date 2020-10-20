@@ -181,12 +181,12 @@ public class RatingController {
 	 * 
 	 * @param arr an array of teams
 	 */
-	public void teamRatingSelectionSort() {
+	public ArrayList<Team> teamRatingSelectionSort() {
 		for (int i = 0; i < teams.size(); i++) {
 			// find position of smallest rank between (i + 1)th element and last element
 			int pos = i;
 			for (int j = i; j < teams.size(); j++) {
-				if (teams.get(j).getRank() < teams.get(pos).getRank())
+				if (teams.get(j).getRank() > teams.get(pos).getRank())
 					pos = j;
 			}
 			// Swap min (smallest rank) to current position on array
@@ -194,6 +194,7 @@ public class RatingController {
 			teams.set(pos, teams.get(i));
 			teams.set(i, min);
 		}
+		return teams;
 	}
 
 	/**
