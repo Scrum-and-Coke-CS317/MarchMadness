@@ -78,14 +78,10 @@ public class FileController {
 				if (!hasPlayed) {
 					currTeam.addGameNotPlayedToSeason(compareTeamName);
 					allTeams.put(currTeam.getName(), currTeam);
-//					System.out.println(currTeam.getSeason().containsKey(compareTeamName));
 				}
 			}
-//			//Set<String> beepBoop = currTeam.getSeason().keySet();
-//			System.out.println(allTeams.size());
-//			System.out.println();
+
 		}
-//		System.out.println(allTeams.get("Houston").getSeason().size());
 		input.close();
 	}
 	
