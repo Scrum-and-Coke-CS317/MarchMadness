@@ -80,8 +80,19 @@ public class FileController {
 					allTeams.put(currTeam.getName(), currTeam);
 				}
 			}
-
+//			//make sure team's season is filled out
+//			System.out.println(currTeam.getName());
+//			//System.out.println(currTeam.getSeason().size());
+//			System.out.println(currTeam.getSeason().get(currTeam.getName()));
+//			System.out.println(currTeam.getTotalNumGames());
+//			//System.out.println();
 		}
+//		Team beep = allTeams.get("South Florida");
+//		System.out.println(beep.getSeason().get("South Florida"));
+//		System.out.println(beep.getSeason().get("Alabama A&M"));
+//		System.out.println(beep.getSeason().get("Austin Peay"));
+//		System.out.println(beep.getSeason().get("Ohio"));
+//		System.out.println(beep.getSeason().get("Frostburg St"));
 		input.close();
 	}
 	

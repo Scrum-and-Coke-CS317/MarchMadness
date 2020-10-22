@@ -117,6 +117,8 @@ public class Team {
 	public void addGameNotPlayedToSeason(String inputTeamName) {
 		//Unplayed teams shouldn't be in this teams season yet
 		if (inputTeamName == this.name) {
+			//seems to have 1 extra game to totalNumGames so I just decremented by one.
+			this.totalNumGames--;
 			season.put(this.name, totalNumGames);
 		}
 		else if (!season.containsKey(inputTeamName)) {
