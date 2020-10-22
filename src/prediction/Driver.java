@@ -17,7 +17,7 @@ public class Driver {
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		File file = new File("file/mcb2019CSV.csv");
+		File file = new File("file/testfile.csv");
 		//new MyFrame(); work in progress
 		FileController fc = null;
 		
@@ -31,7 +31,7 @@ public class Driver {
 		System.out.println(fc.getAllTeams());
 		RatingController rc = new RatingController(fc.getAllTeams());
 		rc.rankTeams();
-		
+		rc.outputRanking();
 		
 		
 	}

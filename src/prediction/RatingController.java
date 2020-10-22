@@ -164,6 +164,7 @@ public class RatingController {
 
 		double det = season.det();
 		season = season.inverse();
+		season.print(5, 3);
 		season = season.times(1 / det);
 		Matrix rankMatrix = pointDifferentialsMatrix.times(season);
 		double[][] ranks = rankMatrix.getArrayCopy();
