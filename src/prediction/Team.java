@@ -106,4 +106,41 @@ public class Team {
 			season.putIfAbsent(name, -1);
 		}
 	}
+	
+	/**
+	 * Method used to put zero in the matrix for teams that did not play each other.
+	 * Because they did not play each other it is assumed the teams are not already
+	 * mapped to each other.
+	 * 
+	 * @param inputTeamName the name of the team this Team did not play against
+	 */
+	public void addGameNotPlayedToSeason(String inputTeamName) {
+		//Unplayed teams shouldn't be in this teams season yet
+		if (!season.containsKey(inputTeamName)) {
+		season.put(inputTeamName, 0);
+		}
+//		else {
+//			System.out.println("ERROR: Unplayed team should not already be in "
+//					+ "this team's season!");
+//		}
+	}
+	
+	/**
+	 * determines whether this Team has played against another team
+	 * 
+	 * @param rivalName the team we are checking if they played against
+	 * @return output whether or not they have played against each other
+	 */
+	public boolean hasPlayedAgainst (String rivalName) {
+		boolean output;
+		
+		if (season.containsKey(rivalName)) {
+			output = false;
+		}
+		else {
+			output = true;
+		}
+		
+		return output;
+	}
 }

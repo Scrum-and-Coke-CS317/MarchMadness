@@ -4,6 +4,7 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.io.File;
 import java.util.Scanner;
+import java.util.Set;
 import java.io.FileNotFoundException;
 
 /**
@@ -64,6 +65,21 @@ public class FileController {
 				updateTeamInfo(team2Name, team1Name, team2Score - team1Score);
 			}
 			
+		}
+		
+		//Unplayed teams have 0s added to each others seasons
+		Set<String> temp = allTeams.keySet();
+		String[] arrayOfAllTeams = temp.toArray(new String[temp.size()]);
+		for (int i = 0; i < arrayOfAllTeams.length; i++) {
+			Team currTeam = allTeams.get(arrayOfAllTeams[i]);
+			for (int j = i + 1; j < arrayOfAllTeams.length -1; j++) {
+				String compareTeamName = arrayOfAllTeams[j];
+				boolean hasPlayed = currTeam.hasPlayedAgainst(compareTeamName);
+				if (!hasPlayed) {
+					currTeam.addGameNotPlayedToSeason(compareTeamName);
+					allTeams.put(currTeam.getName(), currTeam);
+				}
+			}
 		}
 		
 		input.close();
