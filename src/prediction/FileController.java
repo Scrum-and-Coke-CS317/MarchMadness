@@ -72,16 +72,20 @@ public class FileController {
 		String[] arrayOfAllTeams = temp.toArray(new String[temp.size()]);
 		for (int i = 0; i < arrayOfAllTeams.length; i++) {
 			Team currTeam = allTeams.get(arrayOfAllTeams[i]);
-			for (int j = i + 1; j < arrayOfAllTeams.length -1; j++) {
+			for (int j = 0; j < arrayOfAllTeams.length; j++) {
 				String compareTeamName = arrayOfAllTeams[j];
 				boolean hasPlayed = currTeam.hasPlayedAgainst(compareTeamName);
 				if (!hasPlayed) {
 					currTeam.addGameNotPlayedToSeason(compareTeamName);
 					allTeams.put(currTeam.getName(), currTeam);
+//					System.out.println(currTeam.getSeason().containsKey(compareTeamName));
 				}
 			}
+//			//Set<String> beepBoop = currTeam.getSeason().keySet();
+//			System.out.println(allTeams.size());
+//			System.out.println();
 		}
-		
+//		System.out.println(allTeams.get("Houston").getSeason().size());
 		input.close();
 	}
 	

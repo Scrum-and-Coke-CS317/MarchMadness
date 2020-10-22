@@ -25,7 +25,6 @@ public class Team {
 	public Team(String inputName) {
 
 		season = new HashMap<String, Integer>();
-
 		this.name = inputName;
 		
 	}
@@ -105,6 +104,7 @@ public class Team {
 		else {
 			season.putIfAbsent(name, -1);
 		}
+		totalNumGames++;
 	}
 	
 	/**
@@ -116,13 +116,16 @@ public class Team {
 	 */
 	public void addGameNotPlayedToSeason(String inputTeamName) {
 		//Unplayed teams shouldn't be in this teams season yet
-		if (!season.containsKey(inputTeamName)) {
+		if (inputTeamName == this.name) {
+			season.put(this.name, totalNumGames);
+		}
+		else if (!season.containsKey(inputTeamName)) {
 		season.put(inputTeamName, 0);
 		}
-//		else {
-//			System.out.println("ERROR: Unplayed team should not already be in "
-//					+ "this team's season!");
-//		}
+		else {
+			System.out.println("ERROR: Unplayed team should not already be in "
+					+ "this team's season!");
+		}
 	}
 	
 	/**
@@ -135,10 +138,10 @@ public class Team {
 		boolean output;
 		
 		if (season.containsKey(rivalName)) {
-			output = false;
+			output = true;
 		}
 		else {
-			output = true;
+			output = false;
 		}
 		
 		return output;
